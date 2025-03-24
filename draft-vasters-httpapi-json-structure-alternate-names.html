@@ -2,18 +2,21 @@
 <html lang="en" class="Internet-Draft">
 <head>
 <meta charset="utf-8">
-<meta content="Common,Latin" name="scripts">
+<meta content="Common,Han,Hiragana,Katakana,Latin" name="scripts">
 <meta content="initial-scale=1.0" name="viewport">
-<title>TODO - Your title</title>
-<meta content="Your Name Here" name="author">
+<title>JSON Structure Alternate Names and Descriptions</title>
+<meta content="Clemens Vasters" name="author">
 <meta content="
-       TODO Abstract 
+       This document is an extension to JSON Structure Core. It defines three
+annotation keywords,  altnames ,  altenums , and  descriptions , which allow
+schema authors to provide alternative identifiers, display names, and
+multi-variant descriptions for types, properties, and enumeration values. 
     " name="description">
 <meta content="xml2rfc 3.28.0" name="generator">
 <meta content="next generation" name="keyword">
 <meta content="unicorn" name="keyword">
 <meta content="sparkling distributed ledger" name="keyword">
-<meta content="draft-todo-yourname-protocol-latest" name="ietf.draft">
+<meta content="draft-vasters-httpapi-json-structure-alternate-names" name="ietf.draft">
 <!-- Generator version information:
   xml2rfc 3.28.0
     Python 3.12.9
@@ -29,7 +32,7 @@
     setuptools 70.3.0
     wcwidth 0.2.13
 -->
-<link href="draft-todo-yourname-protocol.xml" rel="alternate" type="application/rfc+xml">
+<link href="draft-vasters-httpapi-json-structure-alternate-names.xml" rel="alternate" type="application/rfc+xml">
 <link href="#copyright" rel="license">
 <style type="text/css">@font-face {
   font-family: 'Lora';
@@ -1045,12 +1048,12 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <table class="ears">
 <thead><tr>
 <td class="left">Internet-Draft</td>
-<td class="center">TODO - Abbreviation</td>
-<td class="right">March 2025</td>
+<td class="center">JSON Structure Alternate Names and Descr</td>
+<td class="right">April 2025</td>
 </tr></thead>
 <tfoot><tr>
-<td class="left">Here</td>
-<td class="center">Expires 25 September 2025</td>
+<td class="left">Vasters</td>
+<td class="center">Expires 26 October 2025</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1060,28 +1063,31 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <dt class="label-workgroup">Workgroup:</dt>
 <dd class="workgroup">WG Working Group</dd>
 <dt class="label-internet-draft">Internet-Draft:</dt>
-<dd class="internet-draft">draft-todo-yourname-protocol-latest</dd>
+<dd class="internet-draft">draft-vasters-httpapi-json-structure-alternate-names</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2025-03-24" class="published">24 March 2025</time>
+<time datetime="2025-04-24" class="published">24 April 2025</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Informational</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2025-09-25">25 September 2025</time></dd>
+<dd class="expires"><time datetime="2025-10-26">26 October 2025</time></dd>
 <dt class="label-authors">Author:</dt>
 <dd class="authors">
 <div class="author">
-      <div class="author-name">Y. N. Here</div>
-<div class="org">Your Organization Here</div>
+      <div class="author-name">C. Vasters</div>
+<div class="org">Microsoft Corporation</div>
 </div>
 </dd>
 </dl>
 </div>
-<h1 id="title">TODO - Your title</h1>
+<h1 id="title">JSON Structure Alternate Names and Descriptions</h1>
 <section id="section-abstract">
       <h2 id="abstract"><a href="#abstract" class="selfRef">Abstract</a></h2>
-<p id="section-abstract-1">TODO Abstract<a href="#section-abstract-1" class="pilcrow">¶</a></p>
+<p id="section-abstract-1">This document is an extension to JSON Structure Core. It defines three
+annotation keywords, <code>altnames</code>, <code>altenums</code>, and <code>descriptions</code>, which allow
+schema authors to provide alternative identifiers, display names, and
+multi-variant descriptions for types, properties, and enumeration values.<a href="#section-abstract-1" class="pilcrow">¶</a></p>
 </section>
 <section class="note rfcEditorRemove" id="section-note.1">
       <h2 id="name-about-this-document">
@@ -1090,7 +1096,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <p id="section-note.1-1">This note is to be removed before publishing as an RFC.<a href="#section-note.1-1" class="pilcrow">¶</a></p>
 <p id="section-note.1-2">
         The latest revision of this draft can be found at <span><a href="https://example.com/LATEST">https://example.com/LATEST</a></span>.
-        Status information for this document may be found at <span><a href="https://datatracker.ietf.org/doc/draft-todo-yourname-protocol/">https://datatracker.ietf.org/doc/draft-todo-yourname-protocol/</a></span>.<a href="#section-note.1-2" class="pilcrow">¶</a></p>
+        Status information for this document may be found at <span><a href="https://datatracker.ietf.org/doc/draft-vasters-httpapi-json-structure-alternate/">https://datatracker.ietf.org/doc/draft-vasters-httpapi-json-structure-alternate/</a></span>.<a href="#section-note.1-2" class="pilcrow">¶</a></p>
 <p id="section-note.1-3">
         Discussion of this document takes place on the
         WG Working Group mailing list (<span><a href="mailto:WG@example.com">mailto:WG@example.com</a></span>),
@@ -1117,7 +1123,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 25 September 2025.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 26 October 2025.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1147,25 +1153,41 @@ svg :is([fill="white"], [fill^="#fff"]) {
         </h2>
 <nav class="toc"><ul class="compact toc ulBare ulEmpty">
 <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.1">
-            <p id="section-toc.1-1.1.1" class="keepWithNext"><a href="#section-1" class="auto internal xref">1</a>.  <a href="#name-introduction" class="internal xref">Introduction</a></p>
+            <p id="section-toc.1-1.1.1"><a href="#section-1" class="auto internal xref">1</a>.  <a href="#name-introduction" class="internal xref">Introduction</a></p>
+<ul class="compact toc ulBare ulEmpty">
+<li class="compact toc ulBare ulEmpty" id="section-toc.1-1.1.2.1">
+                <p id="section-toc.1-1.1.2.1.1" class="keepWithNext"><a href="#section-1.1" class="auto internal xref">1.1</a>.  <a href="#name-conventions" class="internal xref">Conventions</a></p>
+</li>
+              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.1.2.2">
+                <p id="section-toc.1-1.1.2.2.1"><a href="#section-1.2" class="auto internal xref">1.2</a>.  <a href="#name-keywords" class="internal xref">Keywords</a></p>
+<ul class="compact toc ulBare ulEmpty">
+<li class="compact toc ulBare ulEmpty" id="section-toc.1-1.1.2.2.2.1">
+                    <p id="section-toc.1-1.1.2.2.2.1.1" class="keepWithNext"><a href="#section-1.2.1" class="auto internal xref">1.2.1</a>.  <a href="#name-the-altnames-keyword" class="internal xref">The <code>altnames</code> Keyword</a></p>
+</li>
+                  <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.1.2.2.2.2">
+                    <p id="section-toc.1-1.1.2.2.2.2.1" class="keepWithNext"><a href="#section-1.2.2" class="auto internal xref">1.2.2</a>.  <a href="#name-the-altenums-keyword" class="internal xref">The <code>altenums</code> Keyword</a></p>
+</li>
+                  <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.1.2.2.2.3">
+                    <p id="section-toc.1-1.1.2.2.2.3.1"><a href="#section-1.2.3" class="auto internal xref">1.2.3</a>.  <a href="#name-the-descriptions-keyword" class="internal xref">The <code>descriptions</code> Keyword</a></p>
+</li>
+                </ul>
+</li>
+              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.1.2.3">
+                <p id="section-toc.1-1.1.2.3.1"><a href="#section-1.3" class="auto internal xref">1.3</a>.  <a href="#name-security-and-interoperabili" class="internal xref">Security and Interoperability Considerations</a></p>
+</li>
+              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.1.2.4">
+                <p id="section-toc.1-1.1.2.4.1"><a href="#section-1.4" class="auto internal xref">1.4</a>.  <a href="#name-iana-considerations" class="internal xref">IANA Considerations</a></p>
+</li>
+            </ul>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.2">
-            <p id="section-toc.1-1.2.1" class="keepWithNext"><a href="#section-2" class="auto internal xref">2</a>.  <a href="#name-conventions-and-definitions" class="internal xref">Conventions and Definitions</a></p>
+            <p id="section-toc.1-1.2.1"><a href="#section-2" class="auto internal xref">2</a>.  <a href="#name-normative-references" class="internal xref">Normative References</a></p>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.3">
-            <p id="section-toc.1-1.3.1" class="keepWithNext"><a href="#section-3" class="auto internal xref">3</a>.  <a href="#name-security-considerations" class="internal xref">Security Considerations</a></p>
+            <p id="section-toc.1-1.3.1"><a href="#appendix-A" class="auto internal xref"></a><a href="#name-acknowledgments" class="internal xref">Acknowledgments</a></p>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.4">
-            <p id="section-toc.1-1.4.1"><a href="#section-4" class="auto internal xref">4</a>.  <a href="#name-iana-considerations" class="internal xref">IANA Considerations</a></p>
-</li>
-          <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.5">
-            <p id="section-toc.1-1.5.1"><a href="#section-5" class="auto internal xref">5</a>.  <a href="#name-normative-references" class="internal xref">Normative References</a></p>
-</li>
-          <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6">
-            <p id="section-toc.1-1.6.1"><a href="#appendix-A" class="auto internal xref"></a><a href="#name-acknowledgments" class="internal xref">Acknowledgments</a></p>
-</li>
-          <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.7">
-            <p id="section-toc.1-1.7.1"><a href="#appendix-B" class="auto internal xref"></a><a href="#name-authors-address" class="internal xref">Author's Address</a></p>
+            <p id="section-toc.1-1.4.1"><a href="#appendix-B" class="auto internal xref"></a><a href="#name-authors-address" class="internal xref">Author's Address</a></p>
 </li>
         </ul>
 </nav>
@@ -1176,45 +1198,261 @@ svg :is([fill="white"], [fill^="#fff"]) {
       <h2 id="name-introduction">
 <a href="#section-1" class="section-number selfRef">1. </a><a href="#name-introduction" class="section-name selfRef">Introduction</a>
       </h2>
-<p id="section-1-1">TODO Introduction<a href="#section-1-1" class="pilcrow">¶</a></p>
+<p id="section-1-1">This document is an extension to JSON Structure Core <span>[<a href="#JSTRUCT-CORE" class="cite xref">JSTRUCT-CORE</a>]</span>. It
+defines three annotation keywords, <code>altnames</code>, <code>altenums</code>, and <code>descriptions</code>,
+which allow schema authors to provide alternative identifiers, display names,
+and multi-variant descriptions for types, properties, and enumeration values.<a href="#section-1-1" class="pilcrow">¶</a></p>
+<p id="section-1-2">These annotations facilitate mapping between internal schema identifiers and
+external data representations (e.g., JSON keys that do not conform to identifier
+rules) and support internationalization by enabling localized labels.<a href="#section-1-2" class="pilcrow">¶</a></p>
+<div id="conventions">
+<section id="section-1.1">
+        <h3 id="name-conventions">
+<a href="#section-1.1" class="section-number selfRef">1.1. </a><a href="#name-conventions" class="section-name selfRef">Conventions</a>
+        </h3>
+<p id="section-1.1-1">The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD",
+and "OPTIONAL" in this document are to be interpreted as described in
+<span>[<a href="#RFC2119" class="cite xref">RFC2119</a>]</span> and <span>[<a href="#RFC8174" class="cite xref">RFC8174</a>]</span>.<a href="#section-1.1-1" class="pilcrow">¶</a></p>
 </section>
 </div>
-<div id="conventions-and-definitions">
-<section id="section-2">
-      <h2 id="name-conventions-and-definitions">
-<a href="#section-2" class="section-number selfRef">2. </a><a href="#name-conventions-and-definitions" class="section-name selfRef">Conventions and Definitions</a>
-      </h2>
-<p id="section-2-1">The key words "<span class="bcp14">MUST</span>", "<span class="bcp14">MUST NOT</span>", "<span class="bcp14">REQUIRED</span>", "<span class="bcp14">SHALL</span>", "<span class="bcp14">SHALL NOT</span>", "<span class="bcp14">SHOULD</span>", "<span class="bcp14">SHOULD NOT</span>", "<span class="bcp14">RECOMMENDED</span>", "<span class="bcp14">NOT RECOMMENDED</span>",
-"<span class="bcp14">MAY</span>", and "<span class="bcp14">OPTIONAL</span>" in this document are to be interpreted as
-described in BCP 14 <span>[<a href="#RFC2119" class="cite xref">RFC2119</a>]</span> <span>[<a href="#RFC8174" class="cite xref">RFC8174</a>]</span> when, and only when, they
-appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶</a></p>
+<div id="keywords">
+<section id="section-1.2">
+        <h3 id="name-keywords">
+<a href="#section-1.2" class="section-number selfRef">1.2. </a><a href="#name-keywords" class="section-name selfRef">Keywords</a>
+        </h3>
+<p id="section-1.2-1">This section defines the alternate names and symbols annotations.<a href="#section-1.2-1" class="pilcrow">¶</a></p>
+<div id="the-altnames-keyword">
+<section id="section-1.2.1">
+          <h4 id="name-the-altnames-keyword">
+<a href="#section-1.2.1" class="section-number selfRef">1.2.1. </a><a href="#name-the-altnames-keyword" class="section-name selfRef">The <code>altnames</code> Keyword</a>
+          </h4>
+<p id="section-1.2.1-1">The <code>altnames</code> keyword provides alternative names for a named type or property.
+Alternate names are not subject to the identifier syntax restrictions imposed on
+<code>name</code> and MAY be used to map internal schema names to external representations.<a href="#section-1.2.1-1" class="pilcrow">¶</a></p>
+<p id="section-1.2.1-2">The value of <code>altnames</code> MUST be a map where each key is a purpose indicator and
+each value is a string representing an alternate name.<a href="#section-1.2.1-2" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-1.2.1-3.1">
+              <p id="section-1.2.1-3.1.1">The key <code>"json"</code> is RESERVED. When used, it specifies the property key to use
+for a property when encoded in JSON. This allows for JSON keys that do not
+conform to identifier rules.<a href="#section-1.2.1-3.1.1" class="pilcrow">¶</a></p>
+</li>
+            <li class="normal" id="section-1.2.1-3.2">
+              <p id="section-1.2.1-3.2.1">Keys starting with the prefix <code>"lang:"</code> (e.g., <code>"lang:en"</code>, <code>"lang:fr"</code>) are
+RESERVED for localized display names. The suffix after the colon specifies the
+language code. The language code MUST conform to <span>[<a href="#RFC4646" class="cite xref">RFC4646</a>]</span>.<a href="#section-1.2.1-3.2.1" class="pilcrow">¶</a></p>
+</li>
+            <li class="normal" id="section-1.2.1-3.3">
+              <p id="section-1.2.1-3.3.1">Other keys are allowed for custom usage, provided they do not conflict with
+the reserved keys or prefixes.<a href="#section-1.2.1-3.3.1" class="pilcrow">¶</a></p>
+</li>
+          </ul>
+<p id="section-1.2.1-4">The <code>altnames</code> keyword MAY be included in any schema element that has an
+explicit name (i.e., named types or properties). When present, the alternate
+names provide additional mappings that schema processors MAY use for encoding,
+decoding, or user interface display.<a href="#section-1.2.1-4" class="pilcrow">¶</a></p>
+<p id="section-1.2.1-5">Example:<a href="#section-1.2.1-5" class="pilcrow">¶</a></p>
+<div class="lang-json sourcecode" id="section-1.2.1-6">
+<pre>
+{
+  "Person": {
+    "type": "object",
+    "altnames": {
+      "json": "person_data",
+      "lang:en": "Person",
+      "lang:de": "Person"
+    },
+    "properties": {
+      "firstName": {
+        "type": "string",
+        "altnames": {
+          "json": "first_name",
+          "lang:en": "First Name",
+          "lang:de": "Vorname"
+        }
+      },
+      "lastName": {
+        "type": "string",
+        "altnames": {
+          "json": "last_name",
+          "lang:en": "Last Name",
+          "lang:de": "Nachname"
+        }
+      }
+    },
+    "required": ["firstName", "lastName"]
+  }
+}
+</pre><a href="#section-1.2.1-6" class="pilcrow">¶</a>
+</div>
 </section>
 </div>
-<div id="security-considerations">
-<section id="section-3">
-      <h2 id="name-security-considerations">
-<a href="#section-3" class="section-number selfRef">3. </a><a href="#name-security-considerations" class="section-name selfRef">Security Considerations</a>
-      </h2>
-<p id="section-3-1">TODO Security<a href="#section-3-1" class="pilcrow">¶</a></p>
+<div id="the-altenums-keyword">
+<section id="section-1.2.2">
+          <h4 id="name-the-altenums-keyword">
+<a href="#section-1.2.2" class="section-number selfRef">1.2.2. </a><a href="#name-the-altenums-keyword" class="section-name selfRef">The <code>altenums</code> Keyword</a>
+          </h4>
+<p id="section-1.2.2-1">The <code>altenums</code> keyword provides alternative representations (symbols) for
+enumeration values defined by a type using the <code>enum</code> keyword. Alternate symbols
+allow schema authors to map internal enum values to external codes or localized
+display symbols.<a href="#section-1.2.2-1" class="pilcrow">¶</a></p>
+<p id="section-1.2.2-2">The value of <code>altenums</code> MUST be a JSON object (map) where each key is a purpose
+indicator and each corresponding value is an object mapping each enumeration
+value (as defined in the <code>enum</code> array) to its alternate symbol.<a href="#section-1.2.2-2" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-1.2.2-3.1">
+              <p id="section-1.2.2-3.1.1">The key <code>"json"</code> is RESERVED and MUST be used to specify alternate symbols for
+JSON encoding.<a href="#section-1.2.2-3.1.1" class="pilcrow">¶</a></p>
+</li>
+            <li class="normal" id="section-1.2.2-3.2">
+              <p id="section-1.2.2-3.2.1">Keys beginning with <code>"lang:"</code> (e.g., <code>"lang:en"</code>, <code>"lang:es"</code>) are RESERVED
+for providing localized alternate symbols.<a href="#section-1.2.2-3.2.1" class="pilcrow">¶</a></p>
+</li>
+            <li class="normal" id="section-1.2.2-3.3">
+              <p id="section-1.2.2-3.3.1">Additional keys are permitted for custom usage, subject to no conflicts with
+reserved keys or prefixes.<a href="#section-1.2.2-3.3.1" class="pilcrow">¶</a></p>
+</li>
+          </ul>
+<p id="section-1.2.2-4">The <code>altenums</code> keyword MUST be used only with schemas that include an <code>enum</code>
+keyword. When present, it provides alternative representations for each
+enumeration value that schema processors MAY use for encoding or display
+purposes.<a href="#section-1.2.2-4" class="pilcrow">¶</a></p>
+<div class="lang-json sourcecode" id="section-1.2.2-5">
+<pre>
+{
+  "Color": {
+    "type": "string",
+    "enum": ["RED", "GREEN", "BLUE"],
+    "altenums": {
+      "json": {
+        "RED": "#FF0000",
+        "GREEN": "#00FF00",
+        "BLUE": "#0000FF"
+      },
+      "lang:en": {
+        "RED": "Red",
+        "GREEN": "Green",
+        "BLUE": "Blue"
+      },
+      "lang:de": {
+        "RED": "Rot",
+        "GREEN": "Grün",
+        "BLUE": "Blau"
+      }
+    }
+  }
+}
+</pre><a href="#section-1.2.2-5" class="pilcrow">¶</a>
+</div>
+</section>
+</div>
+<div id="the-descriptions-keyword">
+<section id="section-1.2.3">
+          <h4 id="name-the-descriptions-keyword">
+<a href="#section-1.2.3" class="section-number selfRef">1.2.3. </a><a href="#name-the-descriptions-keyword" class="section-name selfRef">The <code>descriptions</code> Keyword</a>
+          </h4>
+<p id="section-1.2.3-1">The <code>descriptions</code> keyword provides multi-variant descriptions as an alternative
+to the <code>description</code> keyword. It allows schema authors to provide localized or
+context-specific descriptions for types, properties, or enumeration values.<a href="#section-1.2.3-1" class="pilcrow">¶</a></p>
+<p id="section-1.2.3-2">The value of <code>descriptions</code> MUST be a map where each key is a purpose indicator
+and each value is a string representing a description.<a href="#section-1.2.3-2" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-1.2.3-3.1">
+              <p id="section-1.2.3-3.1.1">Keys beginning with <code>"lang:"</code> (e.g., <code>"lang:en"</code>, <code>"lang:fr"</code>) are RESERVED
+for localized descriptions. The suffix after the colon specifies the language
+code. The language code MUST conform to <span>[<a href="#RFC4646" class="cite xref">RFC4646</a>]</span>.<a href="#section-1.2.3-3.1.1" class="pilcrow">¶</a></p>
+</li>
+            <li class="normal" id="section-1.2.3-3.2">
+              <p id="section-1.2.3-3.2.1">Other keys are allowed for custom usage, provided they do not conflict with
+the reserved keys or prefixes.<a href="#section-1.2.3-3.2.1" class="pilcrow">¶</a></p>
+</li>
+          </ul>
+<p id="section-1.2.3-4">The <code>descriptions</code> keyword MAY be included in any schema element that can have a
+description. When present, the descriptions provide additional mappings that
+schema processors MAY use for user interface display.<a href="#section-1.2.3-4" class="pilcrow">¶</a></p>
+<p id="section-1.2.3-5">Example:<a href="#section-1.2.3-5" class="pilcrow">¶</a></p>
+<div class="lang-json sourcecode" id="section-1.2.3-6">
+<pre>
+{
+  "Person": {
+    "type": "object",
+    "descriptions": {
+      "lang:en": "A person object with first and last name",
+      "lang:de": "Ein Person-Objekt mit Vor- und Nachnamen",
+      "lang:fr": "Un objet personne avec prénom et nom de famille",
+      "lang:cn": "一个带有名字和姓氏的人对象",
+      "lang:jp": "名前と姓を持つ人物オブジェクト"
+    },
+    "properties": {
+      "firstName": {
+        "type": "string",
+        "descriptions": {
+          "lang:en": "The first name of the person",
+          "lang:de": "Der Vorname der Person",
+          "lang:fr": "Le prénom de la personne",
+          "lang:cn": "人的名字",
+          "lang:jp": "人の名前"
+        }
+      },
+      "lastName": {
+        "type": "string",
+        "descriptions": {
+          "lang:en": "The last name of the person",
+          "lang:de": "Der Nachname der Person",
+          "lang:fr": "Le nom de famille de la personne",
+          "lang:cn": "人的姓氏",
+          "lang:jp": "人の姓"
+        }
+      }
+    },
+    "required": ["firstName", "lastName"]
+  }
+}
+</pre><a href="#section-1.2.3-6" class="pilcrow">¶</a>
+</div>
+</section>
+</div>
+</section>
+</div>
+<div id="security-and-interoperability-considerations">
+<section id="section-1.3">
+        <h3 id="name-security-and-interoperabili">
+<a href="#section-1.3" class="section-number selfRef">1.3. </a><a href="#name-security-and-interoperabili" class="section-name selfRef">Security and Interoperability Considerations</a>
+        </h3>
+<p id="section-1.3-1">Alternate names and symbols annotations do not affect the validation of instance
+data. They are purely metadata and MUST be ignored by validators that do not
+support this extension. However, applications that rely on alternate names for
+mapping or localization MUST implement appropriate safeguards to ensure that the
+alternate identifiers are used consistently.<a href="#section-1.3-1" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="iana-considerations">
-<section id="section-4">
-      <h2 id="name-iana-considerations">
-<a href="#section-4" class="section-number selfRef">4. </a><a href="#name-iana-considerations" class="section-name selfRef">IANA Considerations</a>
-      </h2>
-<p id="section-4-1">This document has no IANA actions.<a href="#section-4-1" class="pilcrow">¶</a></p>
+<section id="section-1.4">
+        <h3 id="name-iana-considerations">
+<a href="#section-1.4" class="section-number selfRef">1.4. </a><a href="#name-iana-considerations" class="section-name selfRef">IANA Considerations</a>
+        </h3>
+<p id="section-1.4-1">This document has no IANA actions.<a href="#section-1.4-1" class="pilcrow">¶</a></p>
+</section>
+</div>
 </section>
 </div>
 <div id="sec-normative-references">
-<section id="section-5">
+<section id="section-2">
       <h2 id="name-normative-references">
-<a href="#section-5" class="section-number selfRef">5. </a><a href="#name-normative-references" class="section-name selfRef">Normative References</a>
+<a href="#section-2" class="section-number selfRef">2. </a><a href="#name-normative-references" class="section-name selfRef">Normative References</a>
       </h2>
 <dl class="references">
+<dt id="JSTRUCT-CORE">[JSTRUCT-CORE]</dt>
+      <dd>
+<span class="refAuthor">Vasters, C.</span>, <span class="refTitle">"JSON Structure Core"</span>, <span>n.d.</span>, <span>&lt;<a href="https://json-structure.github.io/core/draft-vasters-httpapi-json-structure-core.html">https://json-structure.github.io/core/draft-vasters-httpapi-json-structure-core.html</a>&gt;</span>. </dd>
+<dd class="break"></dd>
 <dt id="RFC2119">[RFC2119]</dt>
       <dd>
 <span class="refAuthor">Bradner, S.</span>, <span class="refTitle">"Key words for use in RFCs to Indicate Requirement Levels"</span>, <span class="seriesInfo">BCP 14</span>, <span class="seriesInfo">RFC 2119</span>, <span class="seriesInfo">DOI 10.17487/RFC2119</span>, <time datetime="1997-03" class="refDate">March 1997</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc2119">https://www.rfc-editor.org/rfc/rfc2119</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC4646">[RFC4646]</dt>
+      <dd>
+<span class="refAuthor">Phillips, A.</span> and <span class="refAuthor">M. Davis</span>, <span class="refTitle">"Tags for Identifying Languages"</span>, <span class="seriesInfo">RFC 4646</span>, <span class="seriesInfo">DOI 10.17487/RFC4646</span>, <time datetime="2006-09" class="refDate">September 2006</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc4646">https://www.rfc-editor.org/rfc/rfc4646</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC8174">[RFC8174]</dt>
     <dd>
@@ -1237,11 +1475,11 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
 <a href="#name-authors-address" class="section-name selfRef">Author's Address</a>
       </h2>
 <address class="vcard">
-        <div dir="auto" class="left"><span class="fn nameRole">Your Name Here</span></div>
-<div dir="auto" class="left"><span class="org">Your Organization Here</span></div>
+        <div dir="auto" class="left"><span class="fn nameRole">Clemens Vasters</span></div>
+<div dir="auto" class="left"><span class="org">Microsoft Corporation</span></div>
 <div class="email">
 <span>Email:</span>
-<a href="mailto:your.email@example.com" class="email">your.email@example.com</a>
+<a href="mailto:clemensv@microsoft.com" class="email">clemensv@microsoft.com</a>
 </div>
 </address>
 </section>
