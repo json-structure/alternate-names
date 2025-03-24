@@ -12,15 +12,14 @@ v: 3
 area: AREA
 workgroup: WG Working Group
 keyword:
- - next generation
- - unicorn
- - sparkling distributed ledger
+ - JSON
+ - schema
 venue:
   group: WG
   type: Working Group
   mail: WG@example.com
   arch: https://example.com/WG
-  github: USER/REPO
+  github: json-structure/alternate-names
   latest: https://example.com/LATEST
 
 author:
@@ -65,9 +64,7 @@ rules) and support internationalization by enabling localized labels.
 
 ## Conventions {#conventions}
 
-The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD",
-and "OPTIONAL" in this document are to be interpreted as described in
-{{RFC2119}} and {{RFC8174}}.
+{::boilerplate bcp14}
 
 ## Keywords {#keywords}
 
