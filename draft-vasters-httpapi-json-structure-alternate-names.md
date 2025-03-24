@@ -32,9 +32,9 @@ normative:
   RFC2119:
   RFC4646:
   RFC8174:
-  JSTRUCT-CORE: 
+  JSTRUCT-CORE:
     title: "JSON Structure Core"
-    author: 
+    author:
       - fullname: Clemens Vasters
     target: https://json-structure.github.io/core/draft-vasters-httpapi-json-structure-core.html
 
