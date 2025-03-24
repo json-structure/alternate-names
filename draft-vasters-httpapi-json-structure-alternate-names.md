@@ -9,18 +9,18 @@ number:
 date: 2025-04-24
 consensus: true
 v: 3
-area: AREA
-workgroup: WG Working Group
+area: ""
+workgroup: "Building Blocks for HTTP APIs"
 keyword:
  - JSON
  - schema
 venue:
-  group: WG
-  type: Working Group
-  mail: WG@example.com
-  arch: https://example.com/WG
-  github: json-structure/alternate-names
-  latest: https://example.com/LATEST
+  group: "Building Blocks for HTTP APIs"
+  type: ""
+  mail: "httpapi@ietf.org"
+  arch: "https://mailarchive.ietf.org/arch/browse/httpapi/"
+  github: "json-structure/alternate-names"
+  latest: "https://json-structure.github.io/alternate-names/draft-vasters-httpapi-json-structure-alternate-names.html"
 
 author:
  -
