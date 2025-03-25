@@ -1,6 +1,6 @@
 ---
 
-title: "JSON Structure Alternate Names and Descriptions"
+title: "JSON Structure: Alternate Names and Descriptions"
 category: info
 
 docname: draft-vasters-httpapi-json-structure-alternate-names
