@@ -235,6 +235,50 @@ Example:
 }
 ~~~
 
+## Enabling the Annotations {#enabling-the-annotations}
+
+Alternate names and symbols annotations can be enabled in a schema or
+meta-schema by adding the `JSONSchemaAlternateNames` key to the `$uses` clause
+when referencing the extended meta-schema:
+
+~~~ json
+{
+  "$schema": "https://json-structure.github.io/meta/extended/v0/#",
+  "$id": "myschema",
+  "$uses": [
+    "JSONStructureAlternateNames"
+  ],
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "altnames": {
+        "lang:fr": "Nom"
+      }
+    }
+  }
+}
+~~~
+
+The annotation are enabled by default in the validation meta-schema:
+
+~~~ json
+{
+  "$schema": "https://json-structure.github.io/meta/validation/v0/#",
+  "$id": "myschema",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "altnames": {
+        "lang:fr": "Nom"
+      }
+    }
+  }
+}
+~~~
+
+
 ## Security and Interoperability Considerations {#security-and-interoperability-considerations}
 
 Alternate names and symbols annotations do not affect the validation of instance
