@@ -10,15 +10,15 @@ date: 2025-04-24
 consensus: true
 v: 3
 area: AREA
-workgroup:  WG Working Group
+workgroup: TBD
 keyword:
  - JSON
  - schema
 venue:
-  group: WG
+  group: TBD
   type: Working Group
-  mail: WG@example.com
-  arch: https://example.com/WG
+  mail: TBD
+  arch: TBD
   github: "json-structure/alternate-names"
   latest: "https://json-structure.github.io/alternate-names/draft-vasters-json-structure-alternate-names.html"
 
