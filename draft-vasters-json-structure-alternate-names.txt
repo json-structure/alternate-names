@@ -75,8 +75,9 @@ Table of Contents
        1.2.1.  The altnames Keyword
        1.2.2.  The altenums Keyword
        1.2.3.  The descriptions Keyword
-     1.3.  Security and Interoperability Considerations
-     1.4.  IANA Considerations
+     1.3.  Enabling the Annotations
+     1.4.  Security and Interoperability Considerations
+     1.5.  IANA Considerations
    2.  Normative References
    Acknowledgments
    Author's Address
@@ -276,7 +277,46 @@ Table of Contents
      }
    }
 
-1.3.  Security and Interoperability Considerations
+1.3.  Enabling the Annotations
+
+   Alternate names and symbols annotations can be enabled in a schema or
+   meta-schema by adding the JSONSchemaAlternateNames key to the $uses
+   clause when referencing the extended meta-schema:
+
+   {
+     "$schema": "https://json-structure.github.io/meta/extended/v0/#",
+     "$id": "myschema",
+     "$uses": [
+       "JSONStructureAlternateNames"
+     ],
+     "type": "object",
+     "properties": {
+       "name": {
+         "type": "string",
+         "altnames": {
+           "lang:fr": "Nom"
+         }
+       }
+     }
+   }
+
+   The annotation are enabled by default in the validation meta-schema:
+
+   {
+     "$schema": "https://json-structure.github.io/meta/validation/v0/#",
+     "$id": "myschema",
+     "type": "object",
+     "properties": {
+       "name": {
+         "type": "string",
+         "altnames": {
+           "lang:fr": "Nom"
+         }
+       }
+     }
+   }
+
+1.4.  Security and Interoperability Considerations
 
    Alternate names and symbols annotations do not affect the validation
    of instance data.  They are purely metadata and MUST be ignored by
@@ -285,7 +325,7 @@ Table of Contents
    implement appropriate safeguards to ensure that the alternate
    identifiers are used consistently.
 
-1.4.  IANA Considerations
+1.5.  IANA Considerations
 
    This document has no IANA actions.
 
