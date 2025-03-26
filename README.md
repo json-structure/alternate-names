@@ -4,10 +4,10 @@
 
 This is the working area for the individual Internet-Draft, "JSON Structure Alternate Names and Descriptions".
 
-* [Editor's Copy](https://json-structure.github.io/alternate-names/#go.draft-vasters-httpapi-json-structure-alternate-names.html)
-* [Datatracker Page](https://datatracker.ietf.org/doc/draft-vasters-httpapi-json-structure-alternate-names)
-* [Individual Draft](https://datatracker.ietf.org/doc/html/draft-vasters-httpapi-json-structure-alternate-names)
-* [Compare Editor's Copy to Individual Draft](https://json-structure.github.io/alternate-names/#go.draft-vasters-httpapi-json-structure-alternate-names.diff)
+* [Editor's Copy](https://json-structure.github.io/alternate-names/#go.draft-vasters-json-structure-alternate-names.html)
+* [Datatracker Page](https://datatracker.ietf.org/doc/draft-vasters-json-structure-alternate-names)
+* [Individual Draft](https://datatracker.ietf.org/doc/html/draft-vasters-json-structure-alternate-names)
+* [Compare Editor's Copy to Individual Draft](https://json-structure.github.io/alternate-names/#go.draft-vasters-json-structure-alternate-names.diff)
 
 
 ## Contributing
