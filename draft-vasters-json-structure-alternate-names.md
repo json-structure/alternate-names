@@ -1,16 +1,16 @@
 ---
 
 title: "JSON Structure: Alternate Names and Descriptions"
-category: info
+category: std
 
 docname: draft-vasters-json-structure-alternate-names-latest
 submissiontype: IETF  # also: "independent", "editorial", "IAB", or "IRTF"
 number:
-date: 2025-04-24
+date: 2025-07-02
 consensus: true
 v: 3
-area: AREA
-workgroup: TBD
+area: Web and Internet Transport
+workgroup: Building Blocks for HTTP APIs
 keyword:
  - JSON
  - schema
