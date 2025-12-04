@@ -4,8 +4,8 @@
 
 Building Blocks for HTTP APIs                                 C. Vasters
 Internet-Draft                                     Microsoft Corporation
-Intended status: Standards Track                             2 July 2025
-Expires: 3 January 2026
+Intended status: Standards Track                         4 December 2025
+Expires: 7 June 2026
 
 
             JSON Structure: Alternate Names and Descriptions
@@ -48,7 +48,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 3 January 2026.
+   This Internet-Draft will expire on 7 June 2026.
 
 Copyright Notice
 
@@ -67,15 +67,16 @@ Copyright Notice
 Table of Contents
 
    1.  Introduction
-     1.1.  Conventions
-     1.2.  Keywords
-       1.2.1.  The altnames Keyword
-       1.2.2.  The altenums Keyword
-       1.2.3.  The descriptions Keyword
-     1.3.  Enabling the Annotations
-     1.4.  Security and Interoperability Considerations
-     1.5.  IANA Considerations
-   2.  Normative References
+   2.  Conventions
+   3.  Keywords
+     3.1.  The altnames Keyword
+     3.2.  The altenums Keyword
+     3.3.  The descriptions Keyword
+   4.  Enabling the Annotations
+   5.  Security and Interoperability Considerations
+   6.  IANA Considerations
+   7.  Normative References
+   Changes from draft-vasters-json-structure-alternate-names-00
    Acknowledgments
    Author's Address
 
@@ -92,7 +93,7 @@ Table of Contents
    do not conform to identifier rules) and support internationalization
    by enabling localized labels.
 
-1.1.  Conventions
+2.  Conventions
 
    The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT",
    "SHOULD", "SHOULD NOT", "RECOMMENDED", "NOT RECOMMENDED", "MAY", and
@@ -100,11 +101,11 @@ Table of Contents
    BCP 14 [RFC2119] [RFC8174] when, and only when, they appear in all
    capitals, as shown here.
 
-1.2.  Keywords
+3.  Keywords
 
    This section defines the alternate names and symbols annotations.
 
-1.2.1.  The altnames Keyword
+3.1.  The altnames Keyword
 
    The altnames keyword provides alternative names for a named type or
    property.  Alternate names are not subject to the identifier syntax
@@ -163,7 +164,7 @@ Table of Contents
      }
    }
 
-1.2.2.  The altenums Keyword
+3.2.  The altenums Keyword
 
    The altenums keyword provides alternative representations (symbols)
    for enumeration values defined by a type using the enum keyword.
@@ -213,7 +214,7 @@ Table of Contents
      }
    }
 
-1.2.3.  The descriptions Keyword
+3.3.  The descriptions Keyword
 
    The descriptions keyword provides multi-variant descriptions as an
    alternative to the description keyword.  It allows schema authors to
@@ -274,7 +275,7 @@ Table of Contents
      }
    }
 
-1.3.  Enabling the Annotations
+4.  Enabling the Annotations
 
    Alternate names and symbols annotations can be enabled in a schema or
    meta-schema by adding the JSONSchemaAlternateNames key to the $uses
@@ -313,7 +314,7 @@ Table of Contents
      }
    }
 
-1.4.  Security and Interoperability Considerations
+5.  Security and Interoperability Considerations
 
    Alternate names and symbols annotations do not affect the validation
    of instance data.  They are purely metadata and MUST be ignored by
@@ -322,11 +323,11 @@ Table of Contents
    implement appropriate safeguards to ensure that the alternate
    identifiers are used consistently.
 
-1.5.  IANA Considerations
+6.  IANA Considerations
 
    This document has no IANA actions.
 
-2.  Normative References
+7.  Normative References
 
    [JSTRUCT-CORE]
               Vasters, C., "JSON Structure Core", n.d., <https://json-
@@ -345,6 +346,10 @@ Table of Contents
    [RFC8174]  Leiba, B., "Ambiguity of Uppercase vs Lowercase in RFC
               2119 Key Words", BCP 14, RFC 8174, DOI 10.17487/RFC8174,
               May 2017, <https://www.rfc-editor.org/rfc/rfc8174>.
+
+Changes from draft-vasters-json-structure-alternate-names-00
+
+   *  Fixed section heading levels throughout the document.
 
 Acknowledgments
 
