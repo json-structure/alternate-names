@@ -6,7 +6,7 @@ category: std
 docname: draft-vasters-json-structure-alternate-names-latest
 submissiontype: IETF  # also: "independent", "editorial", "IAB", or "IRTF"
 number:
-date: 2025-07-02
+date: 2025-12-04
 consensus: true
 v: 3
 area: Web and Internet Transport
@@ -49,7 +49,7 @@ multi-variant descriptions for types, properties, and enumeration values.
 
 --- middle
 
-## Introduction {#introduction}
+# Introduction {#introduction}
 
 This document is an extension to JSON Structure Core {{JSTRUCT-CORE}}. It
 defines three annotation keywords, `altnames`, `altenums`, and `descriptions`,
@@ -60,15 +60,15 @@ These annotations facilitate mapping between internal schema identifiers and
 external data representations (e.g., JSON keys that do not conform to identifier
 rules) and support internationalization by enabling localized labels.
 
-## Conventions {#conventions}
+# Conventions {#conventions}
 
 {::boilerplate bcp14}
 
-## Keywords {#keywords}
+# Keywords {#keywords}
 
 This section defines the alternate names and symbols annotations.
 
-### The `altnames` Keyword {#the-altnames-keyword}
+## The `altnames` Keyword {#the-altnames-keyword}
 
 The `altnames` keyword provides alternative names for a named type or property.
 Alternate names are not subject to the identifier syntax restrictions imposed on
@@ -125,7 +125,7 @@ Example:
 }
 ~~~
 
-### The `altenums` Keyword {#the-altenums-keyword}
+## The `altenums` Keyword {#the-altenums-keyword}
 
 The `altenums` keyword provides alternative representations (symbols) for
 enumeration values defined by a type using the `enum` keyword. Alternate symbols
@@ -174,7 +174,7 @@ purposes.
 }
 ~~~
 
-### The `descriptions` Keyword {#the-descriptions-keyword}
+## The `descriptions` Keyword {#the-descriptions-keyword}
 
 The `descriptions` keyword provides multi-variant descriptions as an alternative
 to the `description` keyword. It allows schema authors to provide localized or
@@ -233,7 +233,7 @@ Example:
 }
 ~~~
 
-## Enabling the Annotations {#enabling-the-annotations}
+# Enabling the Annotations {#enabling-the-annotations}
 
 Alternate names and symbols annotations can be enabled in a schema or
 meta-schema by adding the `JSONSchemaAlternateNames` key to the `$uses` clause
@@ -277,7 +277,7 @@ The annotation are enabled by default in the validation meta-schema:
 ~~~
 
 
-## Security and Interoperability Considerations {#security-and-interoperability-considerations}
+# Security and Interoperability Considerations {#security-and-interoperability-considerations}
 
 Alternate names and symbols annotations do not affect the validation of instance
 data. They are purely metadata and MUST be ignored by validators that do not
@@ -285,11 +285,16 @@ support this extension. However, applications that rely on alternate names for
 mapping or localization MUST implement appropriate safeguards to ensure that the
 alternate identifiers are used consistently.
 
-## IANA Considerations {#iana-considerations}
+# IANA Considerations {#iana-considerations}
 
 This document has no IANA actions.
 
 --- back
+
+# Changes from draft-vasters-json-structure-alternate-names-00
+{:numbered="false"}
+
+- Fixed section heading levels throughout the document.
 
 # Acknowledgments
 {:numbered="false"}
