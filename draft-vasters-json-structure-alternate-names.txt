@@ -76,6 +76,7 @@ Table of Contents
    5.  Security and Interoperability Considerations
    6.  IANA Considerations
    7.  Normative References
+   Changes from draft-vasters-json-structure-alternate-names-01
    Changes from draft-vasters-json-structure-alternate-names-00
    Acknowledgments
    Author's Address
@@ -346,6 +347,11 @@ Table of Contents
    [RFC8174]  Leiba, B., "Ambiguity of Uppercase vs Lowercase in RFC
               2119 Key Words", BCP 14, RFC 8174, DOI 10.17487/RFC8174,
               May 2017, <https://www.rfc-editor.org/rfc/rfc8174>.
+
+Changes from draft-vasters-json-structure-alternate-names-01
+
+   *  Updated all RFC 4646 references to RFC 5646 (BCP 47) in the
+      references block, altnames section, and descriptions section.
 
 Changes from draft-vasters-json-structure-alternate-names-00
 
