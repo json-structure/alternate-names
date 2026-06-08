@@ -28,7 +28,7 @@ author:
 
 normative:
   RFC2119:
-  RFC4646:
+  RFC5646:
   RFC8174:
   JSTRUCT-CORE:
     title: "JSON Structure Core"
@@ -82,7 +82,7 @@ each value is a string representing an alternate name.
   conform to identifier rules.
 - Keys starting with the prefix `"lang:"` (e.g., `"lang:en"`, `"lang:fr"`) are
   RESERVED for localized display names. The suffix after the colon specifies the
-  language code. The language code MUST conform to {{RFC4646}}.
+  language code. The language code MUST conform to {{RFC5646}}.
 - Other keys are allowed for custom usage, provided they do not conflict with
   the reserved keys or prefixes.
 
@@ -185,7 +185,7 @@ and each value is a string representing a description.
 
 - Keys beginning with `"lang:"` (e.g., `"lang:en"`, `"lang:fr"`) are RESERVED
   for localized descriptions. The suffix after the colon specifies the language
-  code. The language code MUST conform to {{RFC4646}}.
+  code. The language code MUST conform to {{RFC5646}}.
 - Other keys are allowed for custom usage, provided they do not conflict with
   the reserved keys or prefixes.
 
