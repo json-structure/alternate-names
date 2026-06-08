@@ -76,6 +76,7 @@ Table of Contents
    5.  Security and Interoperability Considerations
    6.  IANA Considerations
    7.  Normative References
+   Changes from draft-vasters-json-structure-alternate-names-01
    Changes from draft-vasters-json-structure-alternate-names-00
    Acknowledgments
    Author's Address
@@ -122,7 +123,7 @@ Table of Contents
    *  Keys starting with the prefix "lang:" (e.g., "lang:en", "lang:fr")
       are RESERVED for localized display names.  The suffix after the
       colon specifies the language code.  The language code MUST conform
-      to [RFC4646].
+      to [RFC5646].
 
    *  Other keys are allowed for custom usage, provided they do not
       conflict with the reserved keys or prefixes.
@@ -227,7 +228,7 @@ Table of Contents
    *  Keys beginning with "lang:" (e.g., "lang:en", "lang:fr") are
       RESERVED for localized descriptions.  The suffix after the colon
       specifies the language code.  The language code MUST conform to
-      [RFC4646].
+      [RFC5646].
 
    *  Other keys are allowed for custom usage, provided they do not
       conflict with the reserved keys or prefixes.
@@ -339,13 +340,18 @@ Table of Contents
               DOI 10.17487/RFC2119, March 1997,
               <https://www.rfc-editor.org/rfc/rfc2119>.
 
-   [RFC4646]  Phillips, A. and M. Davis, "Tags for Identifying
-              Languages", RFC 4646, DOI 10.17487/RFC4646, September
-              2006, <https://www.rfc-editor.org/rfc/rfc4646>.
+   [RFC5646]  Phillips, A., Ed. and M. Davis, Ed., "Tags for Identifying
+              Languages", BCP 47, RFC 5646, DOI 10.17487/RFC5646,
+              September 2009, <https://www.rfc-editor.org/rfc/rfc5646>.
 
    [RFC8174]  Leiba, B., "Ambiguity of Uppercase vs Lowercase in RFC
               2119 Key Words", BCP 14, RFC 8174, DOI 10.17487/RFC8174,
               May 2017, <https://www.rfc-editor.org/rfc/rfc8174>.
+
+Changes from draft-vasters-json-structure-alternate-names-01
+
+   *  Updated all RFC 4646 references to RFC 5646 (BCP 47) in the
+      references block, altnames section, and descriptions section.
 
 Changes from draft-vasters-json-structure-alternate-names-00
 
