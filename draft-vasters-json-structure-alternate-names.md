@@ -291,6 +291,12 @@ This document has no IANA actions.
 
 --- back
 
+# Changes from draft-vasters-json-structure-alternate-names-01
+{:numbered="false"}
+
+- Updated all RFC 4646 references to RFC 5646 (BCP 47) in the references
+  block, `altnames` section, and `descriptions` section.
+
 # Changes from draft-vasters-json-structure-alternate-names-00
 {:numbered="false"}
 
