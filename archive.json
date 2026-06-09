@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-06-07T02:44:24.185296+00:00",
+  "timestamp": "2026-06-09T02:25:36.327800+00:00",
   "repo": "json-structure/alternate-names",
   "labels": [
     {
@@ -49,6 +49,80 @@
       "color": "ffffff"
     }
   ],
-  "issues": [],
-  "pulls": []
+  "issues": [
+    {
+      "number": 1,
+      "id": "I_kwDOONqaYs8AAAABEs8cBA",
+      "title": "Editorial: obsolete RFC4646 references should be RFC5646",
+      "url": "https://github.com/json-structure/alternate-names/issues/1",
+      "state": "CLOSED",
+      "author": "clemensv",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "The following minor editorial issues were found during review:\n\n### 1. Obsolete RFC4646 in references block (line 31)\n\n`RFC4646` is obsolete. Update to `RFC5646` (BCP 47, Tags for Identifying Languages).\n\n### 2. `altnames` section cites RFC4646 (line 85)\n\n> The language code MUST conform to {{RFC4646}}.\n\nShould be `{{RFC5646}}`.\n\n### 3. `descriptions` section cites RFC4646 (line 188)\n\n> The language code MUST conform to {{RFC4646}}.\n\nShould be `{{RFC5646}}`.\n\nAll three instances need to be updated to reference RFC 5646 consistently.",
+      "createdAt": "2026-06-08T06:28:01Z",
+      "updatedAt": "2026-06-08T08:50:08Z",
+      "closedAt": "2026-06-08T08:50:08Z",
+      "comments": []
+    }
+  ],
+  "pulls": [
+    {
+      "number": 2,
+      "id": "PR_kwDOONqaYs7j0OZS",
+      "title": "Editorial: update obsolete RFC4646 references to RFC5646",
+      "url": "https://github.com/json-structure/alternate-names/pull/2",
+      "state": "MERGED",
+      "author": "clemensv",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "RFC 4646 is obsoleted by RFC 5646 (BCP 47). This PR updates:\n\n- The normative references block\n- The `altnames` section citation\n- The `descriptions` section citation\n\nFixes #1",
+      "createdAt": "2026-06-08T08:28:16Z",
+      "updatedAt": "2026-06-08T08:50:07Z",
+      "baseRepository": "json-structure/alternate-names",
+      "baseRefName": "main",
+      "baseRefOid": "2be3cf72c433c7e40c3f1958435c71b097161e74",
+      "headRepository": "json-structure/alternate-names",
+      "headRefName": "editorial/update-rfc4646-to-rfc5646",
+      "headRefOid": "ffaa7434d67690ef92864fb09c6b9b5adf53914a",
+      "closedAt": "2026-06-08T08:50:07Z",
+      "mergedAt": "2026-06-08T08:50:07Z",
+      "mergedBy": "clemensv",
+      "mergeCommit": {
+        "oid": "22a2ed9db1e530d4f7cdedaa5d65a096350bb3d3"
+      },
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 3,
+      "id": "PR_kwDOONqaYs7j2XG_",
+      "title": "Update changes section for draft-02",
+      "url": "https://github.com/json-structure/alternate-names/pull/3",
+      "state": "MERGED",
+      "author": "clemensv",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Adds the changes section documenting updates since draft-vasters-json-structure-alternate-names-01.",
+      "createdAt": "2026-06-08T10:00:50Z",
+      "updatedAt": "2026-06-08T15:22:43Z",
+      "baseRepository": "json-structure/alternate-names",
+      "baseRefName": "main",
+      "baseRefOid": "22a2ed9db1e530d4f7cdedaa5d65a096350bb3d3",
+      "headRepository": "json-structure/alternate-names",
+      "headRefName": "editorial/update-changes-section",
+      "headRefOid": "0d91bc6c15bae2fd8eacc209bdba96dad5599ca0",
+      "closedAt": "2026-06-08T15:22:42Z",
+      "mergedAt": "2026-06-08T15:22:42Z",
+      "mergedBy": "clemensv",
+      "mergeCommit": {
+        "oid": "4a6593d90e92c27dd4d9e908e65a51da619a303c"
+      },
+      "comments": [],
+      "reviews": []
+    }
+  ]
 }
