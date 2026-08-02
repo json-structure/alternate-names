@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-06-09T02:25:36.327800+00:00",
+  "timestamp": "2026-08-02T01:57:41.876240+00:00",
   "repo": "json-structure/alternate-names",
   "labels": [
     {
@@ -64,6 +64,54 @@
       "createdAt": "2026-06-08T06:28:01Z",
       "updatedAt": "2026-06-08T08:50:08Z",
       "closedAt": "2026-06-08T08:50:08Z",
+      "comments": []
+    },
+    {
+      "number": 4,
+      "id": "I_kwDOONqaYs8AAAABK6hB8g",
+      "title": "Enabling section names the feature JSONSchemaAlternateNames, not JSONStructureAlternateNames",
+      "url": "https://github.com/json-structure/alternate-names/issues/4",
+      "state": "OPEN",
+      "author": "clemensv",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Section \"Enabling the Annotations\":\r\n\r\n> Alternate names and symbols annotations can be enabled in a schema or meta-schema by adding the `JSONSchemaAlternateNames` key to the `$uses` clause when referencing the extended meta-schema:\r\n\r\nThe example directly beneath it uses `JSONStructureAlternateNames`, which is the name the SDKs accept:\r\n\r\n```json\r\n\"$uses\": [\r\n  \"JSONStructureAlternateNames\"\r\n]\r\n```\r\n\r\n`JSONSchemaAlternateNames` is rejected by `json-structure-check` with `SCHEMA_USES_UNKNOWN_EXTENSION`, so the prose sends a reader to a name that does not work.\r\n\r\n## Proposal\r\n\r\nChange `JSONSchemaAlternateNames` to `JSONStructureAlternateNames` in the prose. It is the only occurrence of the `JSONSchema` prefix in the draft.\r\n",
+      "createdAt": "2026-07-31T07:23:01Z",
+      "updatedAt": "2026-07-31T07:23:01Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 5,
+      "id": "I_kwDOONqaYs8AAAABK6hEvg",
+      "title": "altenums does not define how a non-string enum value is written as a mapping key",
+      "url": "https://github.com/json-structure/alternate-names/issues/5",
+      "state": "OPEN",
+      "author": "clemensv",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Section \"The `altenums` Keyword\":\r\n\r\n> The value of `altenums` MUST be a JSON object (map) where each key is a purpose indicator and each corresponding value is an object mapping each enumeration value (as defined in the `enum` array) to its alternate symbol.\r\n\r\nEvery example in the draft uses a string enum, so the mapping key and the enum value are the same JSON text. `enum` is not restricted to strings.\r\n\r\n## The case\r\n\r\n```json\r\n\"drst\": {\r\n  \"type\": \"int32\",\r\n  \"enum\": [0, 1],\r\n  \"altenums\": {\r\n    \"lang:en\": { \"0\": \"All Doors Closed\", \"1\": \"At Least One Door Open\" }\r\n  }\r\n}\r\n```\r\n\r\nA JSON object key is a string, so the enum value `0` has to be written `\"0\"`. The draft says the key *is* the enumeration value, which for a numeric enum it cannot be. An implementation matching an instance value against the `altenums` map has to know whether to compare `0` against `\"0\"` by stringifying the instance value, by parsing the key, or not at all.\r\n\r\nThe same question arises for a boolean enum (`\"true\"` / `\"false\"`) and, if `enum` is ever permitted to carry them, for `null` and for structured values.\r\n\r\n## Proposal\r\n\r\nEither restrict the keyword:\r\n\r\n> `altenums` MUST only be used with a schema whose `enum` values are all strings.\r\n\r\nor define the key form:\r\n\r\n> Each key in the mapping object MUST be the JSON text of the corresponding enumeration value as it appears in the `enum` array, with string values written without their surrounding quotation marks. A consumer resolves an instance value by rendering it in the same way and comparing the result to the mapping keys.\r\n\r\nThe second is the more useful of the two \u2014 a coded value that happens to be transmitted as a small integer is exactly the case that needs display labels \u2014 but either one removes the ambiguity. The first would also mean the example above is simply not expressible, which is worth knowing before writing it.\r\n\r\nWhile the keys are being pinned down, it would be worth stating whether a mapping object MUST cover every enum value or MAY be partial, and what a consumer does with a symbol that has no entry.\r\n",
+      "createdAt": "2026-07-31T07:23:08Z",
+      "updatedAt": "2026-07-31T07:23:08Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 6,
+      "id": "I_kwDOONqaYs8AAAABK6hH8g",
+      "title": "No reserved purpose indicator for a per-symbol description of an enum value",
+      "url": "https://github.com/json-structure/alternate-names/issues/6",
+      "state": "OPEN",
+      "author": "clemensv",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "The draft gives a schema element a localized *description* through `descriptions`, and an enum symbol a localized *display symbol* through `altenums`. There is no way to give an enum symbol a description.\r\n\r\n## Why that is a gap\r\n\r\nAn upstream feed that reports a coded value publishes the meaning of each code in prose, and a schema that copies the feed usually gathers all of those meanings into the `description` of the enclosing member:\r\n\r\n```json\r\n\"ExceptionEnum\": {\r\n  \"type\": \"string\",\r\n  \"enum\": [\"Ice\", \"Bkw\", \"Ssn\", \"Zfl\", \"Eqp\", \"Mnt\", \"Rat\", \"Dis\", \"Fld\", \"Pr\", \"***\"],\r\n  \"description\": \"USGS exception code explaining why no value is reported: `Ice` affected by ice, `Bkw` affected by backwater, `Ssn` outside the seasonal period of record, `Zfl` zero flow, `Eqp` equipment malfunction, `Mnt` gage under maintenance, `Rat` rating being developed, `Dis` record discontinued, `Fld` value affected by flooding, `Pr` partial-record site, `***` temporarily unavailable.\"\r\n}\r\n```\r\n\r\nThat is where the meaning stops being machine-readable. A consumer that wants to explain to an operator why a reading is missing, or to build a legend, has to parse a sentence. A display label alone does not help: \"Outside Season\" does not tell anyone that the instant falls outside the seasonal period of record for that series.\r\n\r\n`descriptions` cannot be used, because it attaches to the schema element, and the enum symbols are not schema elements.\r\n\r\n## What I did\r\n\r\n`altenums` says \"Additional keys are permitted for custom usage\", so I used a custom purpose indicator named `description`:\r\n\r\n```json\r\n\"altenums\": {\r\n  \"lang:en\": {\r\n    \"Ice\": \"Ice Affected\",\r\n    \"Bkw\": \"Backwater Affected\",\r\n    \"Ssn\": \"Outside Season\"\r\n  },\r\n  \"description\": {\r\n    \"Ice\": \"The reading was affected by ice at the site.\",\r\n    \"Bkw\": \"The reading was affected by backwater.\",\r\n    \"Ssn\": \"The instant falls outside the seasonal period of record for this series.\"\r\n  }\r\n}\r\n```\r\n\r\nThis works, and the enclosing `description` is then free to say what the code list *is* and what a consumer must know about it as a whole, rather than restating each symbol. But `description` is a custom key, so nothing stops another author from choosing `desc`, `doc`, or `meaning`, and no tool can rely on finding it.\r\n\r\n## Proposal\r\n\r\nReserve a purpose indicator for a per-symbol description inside `altenums`, parallel to what `lang:xx` does for symbols. Two shapes are plausible:\r\n\r\n1. Reserve `description` as an unlocalized per-symbol description and `description:lang:xx` (or `desc:xx`) as its localized form. Minimal change; keeps everything about an enum in one keyword.\r\n2. Add a sibling keyword `enumdescriptions` with the same two-level shape as `altenums`, so that the reserved-key vocabulary of `descriptions` (`lang:xx`) carries over unchanged.\r\n\r\nI prefer the first \u2014 an author reading a schema sees one block per enum, and `altenums` is already the place where per-symbol metadata lives \u2014 but the second keeps the \"one keyword, one kind of value\" symmetry the draft otherwise has.\r\n\r\nEither way the draft should say that the reserved per-symbol description keys follow the same coverage rule as the symbol keys, whatever that rule turns out to be (see the related question about non-string enum values and partial mappings).\r\n",
+      "createdAt": "2026-07-31T07:23:15Z",
+      "updatedAt": "2026-07-31T07:23:15Z",
+      "closedAt": null,
       "comments": []
     }
   ],
